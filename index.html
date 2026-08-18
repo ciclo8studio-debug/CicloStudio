@@ -3,87 +3,411 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ciclo Studio | Productora Audiovisual</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Ciclo Studio — Audiovisual Consciente</title>
+    <link rel="stylesheet" href="ciclo-studio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- CABECERA FLOTANTE (Efecto Glassmorphism) -->
-    <header class="header">
-        <div class="header-container">
-            <div class="logo">
-                <!-- Símbolo inspirado en el isotipo de la marca -->
-                <div class="logo-icon">C</div> 
-                CICLO STUDIO
+    <!-- TOP HEADER -->
+    <header class="site-header">
+        <div class="logo-container">
+            <svg class="brand-isotipo" viewBox="0 0 500 500" width="38" height="38">
+                <circle cx="250" cy="250" r="210" fill="none" stroke="#E6E4DF" stroke-width="24"/>
+                <path d="M 370 160 Q 250 120 130 160" fill="none" stroke="#E6E4DF" stroke-width="22" stroke-linecap="round"/>
+                <path d="M 370 240 Q 250 180 100 220" fill="none" stroke="#E6E4DF" stroke-width="22" stroke-linecap="round"/>
+                <path d="M 430 310 Q 280 220 110 320" fill="none" stroke="#E6E4DF" stroke-width="22" stroke-linecap="round"/>
+                <path d="M 350 410 Q 250 300 130 400" fill="none" stroke="#E6E4DF" stroke-width="22" stroke-linecap="round"/>
+            </svg>
+            <div class="logo-text">
+                <span class="logo-title">CICLO STUDIO</span>
+                <span class="logo-sub">AUDIOVISUAL CONSCIENTE</span>
             </div>
-            <nav class="nav">
-                <a href="#inicio">Inicio</a>
-                <a href="#filosofia">Filosofía</a>
-                <a href="#contacto" class="btn-outline">Contacto</a>
-            </nav>
+        </div>
+        <nav class="nav-links">
+            <a href="#services">Servicios</a>
+            <a href="#portfolio">Portafolio</a>
+            <a href="#team">Equipo</a>
+            <a href="#contacts">Contacto</a>
+        </nav>
+        <div class="header-right">
+            <a href="tel:+56950033935" class="phone">+56 9 5003 3935</a>
+            <span class="lang">CL</span>
+            <a href="#brief-modal" class="btn-feedback">Brief</a>
         </div>
     </header>
 
-    <!-- SECCIÓN PRINCIPAL (HERO) -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <p class="subtitle">PRODUCCIÓN AUDIOVISUAL</p>
-            <h1 class="title">NARRATIVAS QUE DEJAN <span>IMPACTO.</span><br>NO BASURA.</h1>
-            <a href="#filosofia" class="scroll-down">
-                Descubre más
-                <span class="arrow">↓</span>
-            </a>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-left">
+            <div class="hero-tag">NARRATIVAS QUE DEJAN IMPACTO. NO BASURA.</div>
+            <h1>VIDEO PRODUCTION, CREATED BY FILMMAKERS TOGETHER WITH MARKETERS</h1>
+            <p>Creamos contenido de alto estándar con un enfoque circular, sostenible y consciente para potenciar tu marca.</p>
+            <a href="#brief-section" class="btn-primary">Iniciar proyecto ↗</a>
         </div>
-        <!-- Decoración geométrica con CSS -->
-        <div class="hero-shape"></div>
-    </section>
-
-    <!-- SECCIÓN DE FILOSOFÍA (Tarjetas interactivas) -->
-    <section id="filosofia" class="philosophy">
-        <div class="section-header">
-            <h2>Nuestra Visión</h2>
-            <div class="line"></div>
-        </div>
-        
-        <div class="grid-cards">
-            <div class="card">
-                <h3>AUDIOVISUAL</h3>
-                <p>Historias creadas con propósito y excelencia cinematográfica.</p>
+        <div class="hero-right">
+            <div class="main-video-card">
+                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80" alt="Producción audiovisual">
             </div>
-            <div class="card">
-                <h3>SOSTENIBLE</h3>
-                <p>Reducimos la huella de carbono en cada rodaje.</p>
-            </div>
-            <div class="card">
-                <h3>CIRCULAR</h3>
-                <p>Optimizamos recursos para que nada se desperdicie.</p>
-            </div>
-            <div class="card">
-                <h3>CONSCIENTE</h3>
-                <p>Decisiones éticas delante y detrás de la cámara.</p>
+            <div class="side-thumbnails">
+                <div class="thumb-card">
+                    <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=400&q=80" alt="Podcast setup">
+                </div>
+                <div class="thumb-card">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Entrevista">
+                </div>
+                <div class="thumb-card">
+                    <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=400&q=80" alt="Equipamiento">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- PIE DE PÁGINA -->
-    <footer id="contacto" class="footer">
-        <div class="footer-container">
-            <div class="quote-box">
-                <h2 class="motivational-quote">"El mejor momento para cambiar el mundo fue ayer. El segundo mejor momento es hoy, a través de historias que importan."</h2>
-                <div class="quote-line"></div>
+    <!-- TAGS ROW -->
+    <section class="tags-row">
+        <div class="tag-group">
+            <span class="pill">Podcasts</span>
+            <span class="pill">Interview</span>
+            <span class="pill">Courses</span>
+            <p class="tag-desc">Estudio propio para creación de contenido o rodaje en terreno.</p>
+        </div>
+        <div class="tag-group">
+            <span class="pill accent-pill">Sostenible</span>
+            <span class="pill accent-pill">Circular</span>
+            <p class="tag-desc">Gestión eficiente de recursos y operación con baja huella ambiental.</p>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose-us">
+        <div class="why-title-col">
+            <span class="section-tag">[01]</span>
+            <h2>FILOSOFÍA CICLO</h2>
+        </div>
+        <div class="why-grid">
+            <div class="card dark-card equipment-card">
+                <h3>EQUIPAMIENTO PROPIETARIO</h3>
+                <p>Soluciones técnicas de alta gama que garantizan una calidad cinematográfica superior, optimizando tiempos y recursos en rodaje y post-producción.</p>
+                <div class="brand-logos">
+                    <span>ARRI</span>
+                    <span class="dot-icon">❖</span>
+                    <span>ATOMOS</span>
+                    <span class="dot-icon">❖</span>
+                    <span>BLACKMAGIC</span>
+                    <span class="dot-icon">❖</span>
+                    <span>SAMYANG</span>
+                    <span class="dot-icon">❖</span>
+                    <span>SONY</span>
+                    <span class="dot-icon">❖</span>
+                    <span>DJI</span>
+                </div>
             </div>
-            
-            <p class="brand-emblem">CICLO STUDIO • SANTIAGO, CHILE</p>
-            
-            <!-- Botón de WhatsApp con animación -->
-            <a href="https://wa.me/56950033935" class="wsp-button" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" width="28" height="28" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="wsp-icon">
-                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-                </svg>
-                Inicia tu proyecto hoy
-            </a>
+            <div class="card dark-card location-card">
+                <h3>UBICACIÓN & TERRENO</h3>
+                <span class="dot-icon green">●</span>
+                <p>Capacidad de rodaje en cualquier locación, incluyendo zonas remotas con autonomía energética y estudio arrendable totalmente equipado.</p>
+            </div>
+            <div class="card dark-card team-card">
+                <h3>EQUIPO MULTIDISCIPLINAR</h3>
+                <p>Combinamos la visión estética de los realizadores con la estrategia de los marketers.</p>
+                <div class="team-pills">
+                    <span class="pill green-pill">Filmmakers</span>
+                    <span class="plus">+</span>
+                    <span class="pill green-pill">Marketers</span>
+                </div>
+                <p class="team-sub">Transformando metas comerciales en contenido con propósito.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section id="services" class="services-section">
+        <div class="section-header-center">
+            <span class="section-tag">[02]</span>
+            <h2>NUESTROS SERVICIOS</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" alt="Cursos">
+                </div>
+                <h3>CURSOS</h3>
+                <p>Educación online y escalamiento de autoridad para expertos e instituciones.</p>
+            </div>
+            <div class="service-card podcast-bg">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=500&q=80" alt="Podcast">
+                </div>
+                <div class="service-pills-top">
+                    <span class="mini-pill">personal brand</span>
+                    <span class="mini-pill">networking</span>
+                </div>
+                <h3>PODCAST</h3>
+                <p>Mecanismos de alto impacto para consolidar tu marca experta.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=500&q=80" alt="Entrevista">
+                </div>
+                <h3>ENTREVISTAS</h3>
+                <p>El formato ideal para maximizar la confianza y el engagement con tu audiencia.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=500&q=80" alt="Show">
+                </div>
+                <h3>SHOWS</h3>
+                <p>Producciones originales de alto nivel para posicionamiento prémium.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-img">
+                    <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=500&q=80" alt="Publicidad">
+                </div>
+                <h3>PUBLICIDAD</h3>
+                <p>Campañas comerciales diseñadas para destacar sin generar ruido innecesario.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-header-center">
+            <span class="section-tag">[03]</span>
+            <h2>NUESTRO PORTAFOLIO</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <div class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80" alt="Proyecto 1">
+                </div>
+                <div class="portfolio-info">
+                    <h3>Proyecto Destacado</h3>
+                    <p class="project-type">Podcast | Producción</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1485579149c0-123123f98f5b?auto=format&fit=crop&w=600&q=80" alt="Proyecto 2">
+                </div>
+                <div class="portfolio-info">
+                    <h3>Proyecto Destacado</h3>
+                    <p class="project-type">Video Comercial</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <div class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Proyecto 3">
+                </div>
+                <div class="portfolio-info">
+                    <h3>Proyecto Destacado</h3>
+                    <p class="project-type">Entrevista | Docu-serie</p>
+                </div>
+            </div>
+        </div>
+        <p class="portfolio-note">Más proyectos disponibles bajo solicitud</p>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process-section">
+        <div class="section-header-center">
+            <span class="section-tag">[04]</span>
+            <h2>NUESTRO PROCESO</h2>
+        </div>
+        <div class="process-grid">
+            <div class="process-step">
+                <div class="step-number">01</div>
+                <h3>BRIEF & ESTRATEGIA</h3>
+                <p>Entendemos profundamente tu marca, audiencia y objetivos para diseñar una estrategia de contenido a medida.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">02</div>
+                <h3>PREPRODUCCIÓN</h3>
+                <p>Planificación exhaustiva: guiones, locaciones, casting, detalles técnicos y logística de rodaje.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">03</div>
+                <h3>PRODUCCIÓN</h3>
+                <p>Ejecución en terreno o estudio con equipo profesional y dirección creativa de calidad cinematográfica.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">04</div>
+                <h3>POSTPRODUCCIÓN</h3>
+                <p>Edición, color grading, sound design y efectos finales para un resultado pulido e impactante.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="team" class="team-section">
+        <div class="section-header-center">
+            <span class="section-tag">[05]</span>
+            <h2>NUESTRO EQUIPO</h2>
+        </div>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-img">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Productor">
+                </div>
+                <h3>Productor</h3>
+                <p class="member-role">Estrategia & Producción</p>
+            </div>
+            <div class="team-member">
+                <div class="member-img">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Realizador">
+                </div>
+                <h3>Realizador</h3>
+                <p class="member-role">Dirección & Cinematografía</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section">
+        <div class="section-header-center">
+            <span class="section-tag">[06]</span>
+            <h2>LO QUE DICEN DE NOSOTROS</h2>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Espacio reservado para testimonios de clientes satisfechos"</p>
+                <p class="testimonial-author">— Nombre del cliente</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Espacio reservado para testimonios de clientes satisfechos"</p>
+                <p class="testimonial-author">— Nombre del cliente</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Espacio reservado para testimonios de clientes satisfechos"</p>
+                <p class="testimonial-author">— Nombre del cliente</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section class="pricing-section">
+        <div class="section-header-center">
+            <span class="section-tag">[07]</span>
+            <h2>PRESUPUESTOS</h2>
+        </div>
+        <div class="pricing-note">
+            <p>Cada proyecto es único. Ofrecemos presupuestos personalizados según alcance, duración, locaciones y complejidad técnica.</p>
+            <p class="pricing-cta">Contáctanos para una consultoría sin compromiso.</p>
+        </div>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h3>PODCAST MENSUAL</h3>
+                <p class="price-range">Desde $X.XXX</p>
+                <ul class="features-list">
+                    <li>4 episodios editados</li>
+                    <li>Diseño gráfico para episodios</li>
+                    <li>Distribución en plataformas</li>
+                    <li>Soporte técnico</li>
+                </ul>
+                <a href="#brief-section" class="btn-pricing">Consultar</a>
+            </div>
+            <div class="pricing-card">
+                <h3>VÍDEO COMERCIAL</h3>
+                <p class="price-range">Desde $X.XXX</p>
+                <ul class="features-list">
+                    <li>1-2 min de duración</li>
+                    <li>Preproducción completa</li>
+                    <li>Un día de rodaje</li>
+                    <li>Postproducción profesional</li>
+                </ul>
+                <a href="#brief-section" class="btn-pricing">Consultar</a>
+            </div>
+            <div class="pricing-card">
+                <h3>DOCU-SERIE</h3>
+                <p class="price-range">Presupuesto personalizado</p>
+                <ul class="features-list">
+                    <li>Hasta 5 episodios</li>
+                    <li>Múltiples locaciones</li>
+                    <li>Dirección creativa premium</li>
+                    <li>Masterización final</li>
+                </ul>
+                <a href="#brief-section" class="btn-pricing">Consultar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRIEF FORM SECTION -->
+    <section id="brief-section" class="brief-section">
+        <div class="section-header-center">
+            <span class="section-tag">[08]</span>
+            <h2>CUÉNTANOS SOBRE TU PROYECTO</h2>
+        </div>
+        <div class="brief-form-container">
+            <form class="brief-form" action="mailto:info@ciclostudio.cl" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Nombre completo *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="company">Empresa / Marca</label>
+                    <input type="text" id="company" name="company">
+                </div>
+                <div class="form-group">
+                    <label for="service">Tipo de servicio *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Selecciona un servicio</option>
+                        <option value="podcast">Podcast</option>
+                        <option value="interview">Entrevista</option>
+                        <option value="course">Curso</option>
+                        <option value="show">Show / Producción Original</option>
+                        <option value="advertising">Publicidad</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Cuéntanos sobre tu proyecto *</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-group checkbox">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">He leído y acepto la política de privacidad</label>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Brief</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>CICLO STUDIO</h4>
+                <p>Audiovisual Consciente</p>
+                <p class="footer-desc">Narrativas que dejan impacto. No basura.</p>
+            </div>
+            <div class="footer-col">
+                <h4>CONTACTO</h4>
+                <p><a href="tel:+56950033935">+56 9 5003 3935</a></p>
+                <p><a href="mailto:info@ciclostudio.cl">info@ciclostudio.cl</a></p>
+            </div>
+            <div class="footer-col">
+                <h4>REDES</h4>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank">Instagram</a>
+                    <a href="https://youtube.com" target="_blank">YouTube</a>
+                    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ciclo Studio. Todos los derechos reservados.</p>
         </div>
     </footer>
 
