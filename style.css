@@ -1,0 +1,348 @@
+/* =========================================
+   VARIABLES DE MARCA (CICLO STUDIO)
+========================================= */
+:root {
+    --dark-green: #142F23;
+    --mid-green: #6B7F6E;
+    --beige: #C9C2B3;
+    --off-white: #E6E4DF;
+    --black: #0F0F0F;
+}
+
+/* =========================================
+   RESET Y TIPOGRAFÍA
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Desplazamiento suave */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--off-white);
+    color: var(--black);
+    overflow-x: hidden;
+}
+
+/* =========================================
+   CABECERA FLOTANTE (GLASSMORPHISM)
+========================================= */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(230, 228, 223, 0.85);
+    backdrop-filter: blur(12px); /* Efecto cristal */
+    border-bottom: 1px solid rgba(20, 47, 35, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: var(--dark-green);
+}
+
+.logo-icon {
+    width: 35px;
+    height: 35px;
+    border: 2px solid var(--dark-green);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--dark-green);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: var(--mid-green);
+}
+
+.btn-outline {
+    border: 1px solid var(--dark-green);
+    padding: 0.6rem 1.5rem;
+    border-radius: 30px;
+    transition: all 0.3s ease !important;
+}
+
+.btn-outline:hover {
+    background-color: var(--dark-green);
+    color: var(--off-white) !important;
+}
+
+/* =========================================
+   SECCIÓN HERO (FULL SCREEN)
+========================================= */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 30%, #1c4231 0%, var(--dark-green) 100%);
+    color: var(--off-white);
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    animation: fadeUp 1.2s ease-out forwards; /* Animación de entrada */
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 6px;
+    color: var(--mid-green);
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 3rem;
+}
+
+.title span {
+    color: var(--beige);
+    font-style: italic;
+    font-weight: 300;
+}
+
+/* Figura decorativa en el fondo */
+.hero-shape {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgba(201, 194, 179, 0.1);
+    border-radius: 50%;
+    top: -100px;
+    right: -150px;
+    z-index: 1;
+}
+
+.scroll-down {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--off-white);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.scroll-down:hover {
+    opacity: 1;
+}
+
+.arrow {
+    font-size: 1.5rem;
+    animation: bounce 2s infinite; /* Flecha rebotando */
+}
+
+/* =========================================
+   FILOSOFÍA (GRILLA DE TARJETAS)
+========================================= */
+.philosophy {
+    padding: 8rem 5%;
+    background-color: var(--off-white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    color: var(--dark-green);
+    letter-spacing: 2px;
+}
+
+.line {
+    width: 60px;
+    height: 3px;
+    background-color: var(--mid-green);
+    margin: 1.5rem auto 0;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: transparent;
+    border: 1px solid var(--beige);
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transición elástica */
+    cursor: default;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: var(--dark-green);
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--mid-green);
+    line-height: 1.6;
+}
+
+/* Efecto hover en tarjetas */
+.card:hover {
+    transform: translateY(-15px); /* Se levanta */
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    box-shadow: 0 20px 40px rgba(20, 47, 35, 0.15);
+}
+
+.card:hover h3, .card:hover p {
+    color: var(--off-white);
+}
+
+/* =========================================
+   PIE DE PÁGINA Y WHATSAPP PRO
+========================================= */
+.footer {
+    background-color: var(--black);
+    color: var(--off-white);
+    padding: 8rem 5% 4rem;
+    text-align: center;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.quote-box {
+    margin-bottom: 4rem;
+}
+
+.motivational-quote {
+    font-size: 2.2rem;
+    font-weight: 300;
+    line-height: 1.4;
+    color: var(--beige);
+}
+
+.quote-line {
+    width: 100px;
+    height: 1px;
+    background-color: var(--mid-green);
+    margin: 2rem auto;
+}
+
+.brand-emblem {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 4rem;
+    color: var(--mid-green);
+}
+
+/* Botón con animación de "Pulso" */
+.wsp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #25D366;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 50px;
+    animation: pulse 2s infinite; /* Latido */
+    transition: transform 0.3s ease;
+}
+
+.wsp-button:hover {
+    transform: scale(1.05); /* Crece un poco al pasar el mouse */
+}
+
+/* =========================================
+   ANIMACIONES (KEYFRAMES)
+========================================= */
+@keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* =========================================
+   RESPONSIVE (MÓVILES)
+========================================= */
+@media (max-width: 768px) {
+    .nav { display: none; } /* Ocultamos el menú temporalmente en móviles para limpieza */
+    .title { font-size: 2.8rem; }
+    .motivational-quote { font-size: 1.6rem; }
+    .wsp-button { width: 100%; padding: 1.2rem; }
+}
