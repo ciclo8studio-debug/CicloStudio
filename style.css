@@ -990,9 +990,9 @@ h3 {
 }
 /* Estilo para la nueva imagen superior en el hero */
 .hero-image-top {
-    width: 50%;
+    width: 1%;
     height: auto;
     margin-bottom: 1px;
     display: block;
-    border-radius: 2%; /* Opcional: si quieres bordes redondeados */
+    border-radius: 100%; /* Opcional: si quieres bordes redondeados */
 }
