@@ -1021,3 +1021,23 @@ h3 {
   border: 3px solid #ffffff; /* Cambia el grosor (3px), el tipo (solid) y el color (#ffffff por el que prefieras) */
   border-radius: 24px;        /* Esto le da las esquinas redondeadas (opcional) */
 }
+
+
+/* Asegura que los contenedores de las pills se adapten bien en móviles */
+.pills-row {
+  display: flex;
+  flex-wrap: wrap;       /* Permite que bajen de línea ordenadamente si no hay espacio */
+  gap: 8px;              /* Espacio uniforme entre píldoras */
+  width: 100%;           /* Ocupa el ancho disponible */
+}
+
+/* Opcional para celulares: si quieres que en pantallas chicas las píldoras ocupen todo el ancho o se centren */
+@media (max-width: 768px) {
+  .tag-group {
+    padding: 20px;       /* Reduce un poco los márgenes internos en celular */
+  }
+  
+  .pills-row {
+    justify-content: flex-start; /* O 'center' si prefieres que en celu queden al centro */
+  }
+}
